@@ -12,18 +12,18 @@ const formaliteRoutes = require('./routes/formalite')
 const actionRoutes = require('./routes/actions')
 const fs = require('fs');
 
-//const cors = require('cors')
-//const whitelist = ['http://localhost:8080', 'http://localhost:8000', 'http://localhost:8080/Dashboard'];
-//const corsOptions = {
-  //credentials: true, // This is important.
- // origin: (origin, callback) => {
-    //if(whitelist.includes(origin))
-     // return callback(null, true)
+const cors = require('cors')
+const whitelist = ['http://localhost:8080', 'http://localhost:8000', 'http://localhost:8080/Dashboard', 'https://quiet-chamber-34955.herokuapp.com', 'http://quiet-chamber-34955.herokuapp.com'];
+const corsOptions = {
+  credentials: true, // This is important.
+ origin: (origin, callback) => {
+    if(whitelist.includes(origin))
+     return callback(null, true)
 
-    //  callback(new Error('Not allowed by CORS'));
- // }
-//}
-//app.use(cors(corsOptions))
+     callback(new Error('Not allowed by CORS'));
+ }
+}
+app.use(cors(corsOptions))
 
 app.use(morgan('tiny'))
 app.use(bodyParser.json())
