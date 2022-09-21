@@ -13,7 +13,7 @@ const actionRoutes = require('./routes/actions')
 const fs = require('fs');
 
 const cors = require('cors')
-const whitelist = ['http://localhost:8080', 'http://localhost:8000', 'http://localhost:8080/Dashboard', 'http://35.174.137.135:8080/', 'https://35.174.137.135:8080/', 'http://35.174.137.135:8080/dashboard'];
+const whitelist = ['http://localhost:8080', 'http://localhost:8000', 'http://localhost:8080/Dashboard', 'http://35.174.137.135:8080', 'https://35.174.137.135:8080', 'http://35.174.137.135:8080/dashboard', '35.174.137.135:8080'];
 const corsOptions = {
   credentials: true, // This is important.
  origin: (origin, callback) => {
