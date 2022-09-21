@@ -13,7 +13,7 @@ const actionRoutes = require('./routes/actions')
 const fs = require('fs');
 
 const cors = require('cors')
-const whitelist = ['http://localhost:8080', 'http://localhost:8000', 'http://localhost:8080/Dashboard', 'https://quiet-chamber-34955.herokuapp.com', 'http://quiet-chamber-34955.herokuapp.com'];
+const whitelist = ['http://localhost:8080', 'http://localhost:8000', 'http://localhost:8080/Dashboard', 'https://quiet-chamber-34955.herokuapp.com', 'http://quiet-chamber-34955.herokuapp.com', 'https://gentle-brushlands-07735.herokuapp.com', 'http://gentle-brushlands-07735.herokuapp.com'];
 const corsOptions = {
   credentials: true, // This is important.
  origin: (origin, callback) => {
